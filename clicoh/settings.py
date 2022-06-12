@@ -15,6 +15,7 @@ from pathlib import Path
 # BASE_DIR = Path(__file__).resolve().parent.parent
 import os
 from datetime import timedelta
+from constants import DB_HOST, DB_NAME, DB_PORT, DB_USER, DB_PASSWORD
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -80,11 +81,11 @@ WSGI_APPLICATION = 'clicoh.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'clicOH',
-        'USER': 'postgres',
-        'PASSWORD': '123',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
+        'PORT': DB_PORT
     }
 }
 

@@ -191,10 +191,10 @@ class OrderViewSet(viewsets.ModelViewSet):
                     order.get_total_usd()
                     order.save()
 
-                    return Response({
-                        'detail': 'ok',
-                        'message': f'La orden fue actualizada correctamente!'
-                    }, status=status.HTTP_200_OK)
+                return Response({
+                    'detail': 'ok',
+                    'message': f'La orden fue actualizada correctamente!'
+                }, status=status.HTTP_200_OK)
 
         except Exception as ex:
             return Response({
